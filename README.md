@@ -1,3 +1,3 @@
 # Project 1- Wire Layout
 
-- [Project-1 Wire Layout.pdf](https://github.com/jennyk1989/project-team/files/7671492/Project-1.Wire.Layout.pdf)
+- ![Wire Layout](https://user-images.githubusercontent.com/92201576/145103687-c705e433-1fff-4ba9-ae0c-5eeadcf0756e.png)
