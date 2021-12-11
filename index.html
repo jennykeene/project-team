@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Currency Wiz: Travel Edition</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="hero">
+      <h1 class="header-title">The <strong>Green</strong> is Universal!</h1>
+      <p>Search for a city/country to see what their main currency is and you will also see what the current exchange rate is!</p>
+    </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h3 class="title">Search by City or Country</h3>
+        <form>
+          <label for="destination">Destination</label>
+          <input placeholder="Enter City/Country" name="destination" id="destination" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn">Check Currency</button>
+        </form>
+      </div>
+      <div class="container">
+        <h3 class="subtitle">Recent Searches</h3>
+        <form id="history">
+          <!-- Prior Searches Will Populate here dynamically-->
+        </form>
+      </div>
+    </section>
+    <!-- This section container will be shifted to the right of the screen -->
+    <section class="section">
+      <h3 class="subtitle">The Main Currency of: <span id="currency-search-result"></span></h3>
+      <div class="container">
+        <!-- This is where the city/countries currency data will be displayed -->
+
+      </div>
+      <div class="container" id="exchange-info">
+        <h3 class="subtitle"><strong>Exchange Rate</strong></h3>
+        <div class="container" id="exchange-contianer">
+          <!-- This is where the exchange rate information will dynamically populate -->
+        </div>
+      </div>
+    </section>
+  </main>
+    
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
+
