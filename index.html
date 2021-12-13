@@ -9,44 +9,71 @@
   </head>
 
   <body>
-    <header class="hero">
-      <h1 class="header-title">The <strong>Green</strong> is Universal!</h1>
-      <p>Search for a city/country to see what their main currency is and you will also see what the current exchange rate is!</p>
-    </header>
-
-  <main>
-    <section class="section">
-      <div class="container">
-        <h3 class="title">Search by City or Country</h3>
-        <form>
-          <label for="destination">Destination</label>
-          <input placeholder="Enter City/Country" name="destination" id="destination" type="text" autofocus="true" class="form-input" />
-          <button type="submit" class="btn">Check Currency</button>
-        </form>
-      </div>
-      <div class="container">
-        <h3 class="subtitle">Recent Searches</h3>
-        <form id="history">
-          <!-- Prior Searches Will Populate here dynamically-->
-        </form>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <p class="title">Weather and Air Quality</p>
+        <p class="subtitle ">Search for a city to check the weather and air quality!</p>
       </div>
     </section>
-    <!-- This section container will be shifted to the right of the screen -->
-    <section class="section">
-      <h3 class="subtitle">The Main Currency of: <span id="currency-search-result"></span></h3>
-      <div class="container">
-        <!-- This is where the city/countries currency data will be displayed -->
 
-      </div>
-      <div class="container" id="exchange-info">
-        <h3 class="subtitle"><strong>Exchange Rate</strong></h3>
-        <div class="container" id="exchange-contianer">
-          <!-- This is where the exchange rate information will dynamically populate -->
-        </div>
-      </div>
-    </section>
-  </main>
+    <section class="section is-large">
+      <!-- simple container to center content horizontally -->
+      <div class="container"> 
+        <div class="columns">
+  
+  
+          <!-- left side of screen main tile -->
+          <div class="column is-3 is-outlined">
+            <aside class="medium menu">
+              <p class="menu-label">Search for a City</p>
+              <ul class="menu-list">
+                <li class="is-active">
+                  <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="cityInput" type="text" autofocus="true"  />
+
+                </li>
+                <li class="is-active">
+                  <button class="button is-info is-normal" type="submit" id="searchBtn">Search</button>
+                </li>
+              </ul>
+              
+              <p class="menu-label">Recent Searches</p>
+              <ul class="menu-list">
+                <!-- search history inserts here -->
+              </ul>
+            </aside>
+          </div>
     
+          <!-- This section container will be shifted to the right of the screen -->
+          <div class="column is-8 is-outlined">
+            <div class="content is-large">
+  
+              <div class="box">
+                <h3 class="title is-3">Current Weather</h3>
+                <article class="message is-primary" id="currentWeather">
+                  <div class="message-body">
+                      <!-- insert weather data here -->
+                  </div>
+                </article>
+              </div>
+  
+              <div class="box">
+                <h3 class="title is-3">Air Quality</h3>
+                <article class="message is-primary" id="currentWeather">
+                  <div class="message-body">
+                      <!-- insert air quality data here -->
+                  </div>
+                </article>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </section>
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 
