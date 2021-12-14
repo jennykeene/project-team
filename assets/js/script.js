@@ -14,7 +14,7 @@ let destinationSearch = (event) => {
   console.log(destination);
   // If statement will clear after the input triggers event listener, and will also notify the user if they enter nothing
   if (destination) {
-    fetchWeather(destination));
+    fetchWeather(destination);
     destinationEl.value = "";
   } else {
     // I will replace this with a modal
