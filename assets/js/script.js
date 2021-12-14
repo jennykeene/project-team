@@ -1,5 +1,5 @@
 // Stated Variables
-let cityInputEl = document.querySelector("#city-input");
+let destinationEl = document.querySelector("#city-input");
 let searchButtonEl = document.querySelector("#search-button");
 let searchHistoryEl = document.querySelector("#search-history");
 let currentWeatherEl = document.querySelector("#current-weather");
@@ -7,15 +7,15 @@ let airQualityEl = document.querySelector("#air-quality");
 
 
 // Function to grab the search information 
-let citySearch = (event) => {
+let destinationSearch = (event) => {
   // Will prevent the page from refreshing every time the "Search" is clicked
   event.preventDefault();
-  let city = cityInputEl.value.trim();
-  console.log(city);
+  let destination = destinationEl.value.trim();
+  console.log(destination);
   // If statement will clear after the input triggers event listener, and will also notify the user if they enter nothing
-  if (city) {
-    fetchWeather(city);
-    cityInputEl.value = "";
+  if (destination) {
+    fetchWeather(destination));
+    destinationEl.value = "";
   } else {
     // I will replace this with a modal
     //alert("Please enter a valid city")
@@ -47,4 +47,4 @@ function fetchWeather(city) {
 
 
 
-searchButtonEl.addEventListener("submit", citySearch);
+searchButtonEl.addEventListener("submit", destinationSearch);
