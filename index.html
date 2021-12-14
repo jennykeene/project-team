@@ -27,7 +27,7 @@
           <form class="column is-3 is-outlined">
             <div class="field">
               <label class="menu-label">Search for a City</label>
-              <div class="control">
+              <div class="control block ">
                 <div class="block is-active">
                   <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="city-input" type="text" autofocus="true"/>
                   <!-- *querySelector needed* to track #city-input -->
@@ -35,7 +35,7 @@
                 <button class="button is-info is-normal" type="submit" id="search-button">Search</button>
                 <!-- *eventListener needed* to track #search-button -->
               </div>
-              <div class="block is-active">
+              <div class="is-active">
                 <label class="menu-label"><strong>Recent Searches</strong></label>
                 <ul class="menu-list" id=search-history>
                   <!-- 'localstorage' history propagates here dynamically *querySelector needed* to track #search-history -->
