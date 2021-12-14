@@ -19,59 +19,60 @@
     </header>
     <!-- Header End -->
     <!-- Main Container Start-->
-    <main class="section is-large">
-      <!-- simple container to center content horizontally -->
+    <main class="section is-medium">
+      <!-- Centering Container Start -->
       <section class="container"> 
+        <!-- City Search and Recent 'localstorage' History Start -->
         <div class="columns">
-          <!-- City Search and Recent 'localstorage' History Start -->
           <div class="column is-3 is-outlined">
             <aside class="medium menu">
               <p class="menu-label">Search for a City</p>
               <ul class="menu-list">
                 <li class="is-active">
-                  <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="cityInput" type="text" autofocus="true"  />
+                  <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="city-input" type="text" autofocus="true"/>
+                  <!-- *querySelector needed* to track #city-input -->
                 </li>
                 <li class="is-active">
-                  <button class="button is-info is-normal" type="submit" id="searchBtn">Search</button>
-                  <!-- *querySelector/eventListener needed* -->
+                  <button class="button is-info is-normal" type="submit" id="search-button">Search</button>
+                  <!-- *querySelector/eventListener needed* to track #search-button -->
                 </li>
               </ul>
               <p class="menu-label">Recent Searches</p>
-              <ul class="menu-list" id=searchHistory>
-                <!-- 'localstorage' history propagates here dynamically *querySelector needed* -->
+              <ul class="menu-list" id=search-history>
+                <!-- 'localstorage' history propagates here dynamically *querySelector needed* to track #search-history -->
               </ul>
             </aside>
           </div>
           <!-- City Search and Recent 'localstorage' History End -->
-          <!-- This section container will be shifted to the right of the screen -->
-          <div class="column is-8 is-outlined">
+          <!-- Weather Information Start -->
+          <div class="column is-9 is-outlined">
             <div class="content is-large">
-              <!-- Box for Weather Information Start -->
               <div class="box">
                 <h3 class="title is-3">Current Weather</h3>
                 <article class="message is-primary" >
-                  <div class="message-body" id="currentWeather">
-                    <!-- Air Quality Dynamically Inserted  *querySelector nedded* -->
+                  <div class="message-body" id="current-weather">
+                    <!-- Air Quality Dynamically Inserted  *querySelector nedded* to track #current-weather -->
                   </div>
                 </article>
               </div>
-              <!-- Box for Weather Information End-->
-              <!-- Box for Air Quality Information Start -->
+              <!-- Weather Information End-->
+              <!-- Air Quality Information Start -->
               <div class="box">
                 <h3 class="title is-3">Air Quality</h3>
                 <article class="message is-primary">
-                  <div class="message-body" id="airQuality">
-                    <!-- Air Quality Dynamically Inserted *querySelector needed* -->
+                  <div class="message-body" id="air-quality">
+                    <!-- Air Quality Dynamically Inserted *querySelector needed* to track #air-quality -->
                   </div>
                 </article>
               </div>
-              <!-- Box for Air Quality Information End -->
+              <!-- Air Quality Information End -->
             </div>
           </div>
         </div>
       </section>
+      <!-- Centering Container End -->
     </main>
-
+    <!-- Main Container End-->
   
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/js/script.js"></script>
