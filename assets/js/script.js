@@ -1,6 +1,6 @@
 //VARIABLES:
 const key = "425535dc025827a7e77aa8a4d5289d87";
-const searchBTN = $("#searchBtn");
+const searchBtn = $("#searchBtn");
 const searchHistory = $("#searchHistory");
 const currentWeather = $("#currentWeather");
 
@@ -50,7 +50,7 @@ function showHistory (searchHistory) {
 
 
 //==================search button listener===================
-$(searchBTN).on("click", function(event) {
+$(searchBtn).on("click", function(event) {
     event.preventDefault();
 
     let citySe = $("#cityInput").val();
