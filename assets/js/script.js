@@ -1,29 +1,30 @@
 // Stated Variables
-let cityInputEl = document.querySelector('#city-input');
-let searchButtonEl = document.querySelector('#search-button');
-let searchHistoryEl = document.querySelector('#search-history');
-let currentWeatherEl = document.querySelector('#current-weather');
-let airQualityEl = document.querySelector('#air-quality');
+let cityInputEl = document.querySelector("#city-input");
+let searchButtonEl = document.querySelector("#search-button");
+let searchHistoryEl = document.querySelector("#search-history");
+let currentWeatherEl = document.querySelector("#current-weather");
+let airQualityEl = document.querySelector("#air-quality"); 
 
 
-
+// Function to grab the search information 
 let citySearch = (event) => {
   // Will prevent the page from refreshing every time the "Search" is clicked
   event.preventDefault();
   let city = cityInputEl.value.trim();
-  //console.log(city);
+  console.log(city);
   // If statement will clear after the input triggers event listener, and will also notify the user if they enter nothing
   if (city) {
     fetchWeather(city);
     cityInputEl.value = "";
   } else {
-    alert('Please enter a valid city')
+    // I will replace this with a modal
+    //alert("Please enter a valid city")
   }
 };
 
 //API Variables
-var token = config.MY_API_TOKEN;
-var key = config.SECRET_API_KEY;
+//var token = config.MY_API_TOKEN;
+//var key = config.SECRET_API_KEY;
 
 
 //============FETCH OPEN WEATHER API DATA ===============
@@ -46,4 +47,4 @@ function fetchWeather(city) {
 
 
 
-searchButtonEl.addEventListener('submit', citySearch);
+searchButtonEl.addEventListener("submit", citySearch);
