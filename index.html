@@ -11,7 +11,7 @@
 
   <body>
     <!-- Header Start -->
-    <header class="hero is-primary">
+    <header class="hero is-link">
       <div class="hero-body">
         <h1 class="title">Weather and Air Quality</h1>
         <h3 class="subtitle">Search for a city to check the weather and air quality!</h3>
@@ -29,10 +29,10 @@
               <label class="menu-label">Search for a City</label>
               <div class="control block ">
                 <div class="block is-active">
-                  <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="city-input" type="text" autofocus="true"/>
+                  <input class="input is-link is-normal" placeholder="Enter City" name="destination" id="city-input" type="text" autofocus="true"/>
                   <!-- *querySelector needed* to track #city-input -->
                 </div>
-                <button class="button is-info is-normal" type="submit" id="search-button">Search</button>
+                <button class="button is-link is-light is-outlined is-normal" type="submit" id="search-button">Search</button>
                 <!-- *eventListener needed* to track #search-button -->
               </div>
               <div class="is-active">
@@ -49,7 +49,7 @@
             <div class="content is-large">
               <div class="box">
                 <h3 class="title is-3">Current Weather</h3>
-                <article class="message is-primary" >
+                <article class="message is-link" >
                   <div class="message-body" id="current-weather">
                     <!-- Air Quality Dynamically Inserted  *querySelector nedded* to track #current-weather -->
                   </div>
@@ -59,7 +59,7 @@
               <!-- Air Quality Information Start -->
               <div class="box">
                 <h3 class="title is-3">Air Quality</h3>
-                <article class="message is-primary">
+                <article class="message is-link">
                   <div class="message-body" id="air-quality">
                     <!-- Air Quality Dynamically Inserted *querySelector needed* to track #air-quality -->
                   </div>
