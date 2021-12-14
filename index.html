@@ -27,17 +27,17 @@
           <form class="column is-3 is-outlined">
             <div class="field">
               <label class="menu-label">Search for a City</label>
-              <div class="control block ">
+              <div class="control block">
                 <div class="block is-active">
-                  <input class="input is-link is-normal" placeholder="Enter City" name="destination" id="city-input" type="text" autofocus="true"/>
+                  <input class="input is-link is-normal" placeholder="Enter City" name="destination" id="cityInput" type="text" autofocus="true"/>
                   <!-- *querySelector needed* to track #city-input -->
                 </div>
-                <button class="button is-link is-light is-outlined is-normal" type="submit" id="search-button">Search</button>
+                <button class="button is-link is-outlined is-normal" type="submit" id="searchBtn">Search</button>
                 <!-- *eventListener needed* to track #search-button -->
               </div>
               <div class="is-active">
                 <label class="menu-label"><strong>Recent Searches</strong></label>
-                <ul class="menu-list" id=search-history>
+                <ul class="menu-list" id="searchHistory">
                   <!-- 'localstorage' history propagates here dynamically *querySelector needed* to track #search-history -->
                 </ul>
               </div>
@@ -50,7 +50,7 @@
               <div class="box">
                 <h3 class="title is-3">Current Weather</h3>
                 <article class="message is-link" >
-                  <div class="message-body" id="current-weather">
+                  <div class="message-body" id="currentWeather">
                     <!-- Air Quality Dynamically Inserted  *querySelector nedded* to track #current-weather -->
                   </div>
                 </article>
@@ -73,7 +73,7 @@
       <!-- Centering Container End -->
     </main>
     <!-- Main Container End-->
-  
+  <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/script2.js"></script>
