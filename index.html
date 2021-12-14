@@ -3,74 +3,74 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Wiz</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-    <section class="hero is-primary">
+    <!-- Header Start -->
+    <header class="hero is-primary">
       <div class="hero-body">
-        <p class="title">Weather and Air Quality</p>
-        <p class="subtitle ">Search for a city to check the weather and air quality!</p>
+        <h1 class="title">Weather and Air Quality</h1>
+        <h3 class="subtitle">Search for a city to check the weather and air quality!</h3>
       </div>
-    </section>
-
-    <section class="section is-large">
+    </header>
+    <!-- Header End -->
+    <!-- Main Container Start-->
+    <main class="section is-large">
       <!-- simple container to center content horizontally -->
-      <div class="container"> 
+      <section class="container"> 
         <div class="columns">
-  
-  
-          <!-- left side of screen main tile -->
+          <!-- City Search and Recent 'localstorage' History Start -->
           <div class="column is-3 is-outlined">
             <aside class="medium menu">
               <p class="menu-label">Search for a City</p>
               <ul class="menu-list">
                 <li class="is-active">
                   <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="cityInput" type="text" autofocus="true"  />
-
                 </li>
                 <li class="is-active">
                   <button class="button is-info is-normal" type="submit" id="searchBtn">Search</button>
+                  <!-- *querySelector/eventListener needed* -->
                 </li>
               </ul>
-              
               <p class="menu-label">Recent Searches</p>
               <ul class="menu-list" id=searchHistory>
-                <!-- search history inserts here -->
+                <!-- 'localstorage' history propagates here dynamically *querySelector needed* -->
               </ul>
             </aside>
           </div>
-    
+          <!-- City Search and Recent 'localstorage' History End -->
           <!-- This section container will be shifted to the right of the screen -->
           <div class="column is-8 is-outlined">
             <div class="content is-large">
-  
+              <!-- Box for Weather Information Start -->
               <div class="box">
                 <h3 class="title is-3">Current Weather</h3>
                 <article class="message is-primary" >
                   <div class="message-body" id="currentWeather">
-                      <!-- insert weather data here -->
+                    <!-- Air Quality Dynamically Inserted  *querySelector nedded* -->
                   </div>
                 </article>
               </div>
-  
+              <!-- Box for Weather Information End-->
+              <!-- Box for Air Quality Information Start -->
               <div class="box">
                 <h3 class="title is-3">Air Quality</h3>
                 <article class="message is-primary">
                   <div class="message-body" id="airQuality">
-                      <!-- insert air quality data here -->
+                    <!-- Air Quality Dynamically Inserted *querySelector needed* -->
                   </div>
                 </article>
               </div>
-      
+              <!-- Box for Air Quality Information End -->
             </div>
           </div>
         </div>
-  
-      </div>
-    </section>
+      </section>
+    </main>
 
   
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
