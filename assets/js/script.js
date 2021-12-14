@@ -43,7 +43,8 @@ function showHistory (searchHistory) {
     $(searchHistory).empty();
 
     for(let i=1; i < searchHistory.length; i++) {
-        let historyButton = $("<a>" + JSON.stringify(searchHistory[i]) + "</a>").addClass("button").attr("href");
+        let historyButton = $("<a>" + JSON.stringify(searchHistory[i]) + "</a>")
+        $(historyButton).text(searchHistory[i]).addClass("button").attr("href");
         $(searchHistory).append(historyButton);
     }
 }
