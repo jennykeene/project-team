@@ -64,7 +64,7 @@ function showHistory (searchHistory) {
 
     for(let i=1; i < searchHistory.length; i++) {
         let historyButton = $("<a>" + JSON.stringify(searchHistory[i]) + "</a>")
-        $(historyButton).text(searchHistory[i]).addClass("button is-link is-light").attr("href");
+        $(historyButton).text(searchHistory[i]).addClass("button is-link is-light block").attr("href");
         $(searchHistory).append(historyButton);
     }
 }
@@ -96,22 +96,4 @@ $("#searchHistory").on("click", ".button", function() {
     pullCoord(historicalCity);
 })
 
-//==================search button listener===================
-$(searchBTN).on("click", function(event) {
-    event.preventDefault();
-
-    let citySe = $("#cityInput").val();
-    if (citySe === "") {
-        return;
-    }
-    
-    pullCoord(citySe);
-
-    //storage
-    searchHistory.push(citySe);
-    localStorage.setItem(searchHistory, JSON.stringify(searchHistory));
-    showHistory(searchHistory);
-
-    $("#cityInput").val("");
-})
 
