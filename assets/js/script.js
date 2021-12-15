@@ -44,9 +44,11 @@ function fetchPollution(coordinates) {
 
 function showPollution(pollution) {
     let airPollution = pollution.data.current.pollution.aqius; 
+        $(airQuaility).empty();
         let alertColor;
+        $(airQuaility).append("<a>" + airPollution + "</a>")
         if (airPollution <= 50) {
-            alertColor = "$green";
+            alertColor = "$tag is-success";
         } else if (airPollution > 50 || airPollution < 101) {
             alertColor = "$yellow";
         } else if (airPollution > 150 || airPollution < 201) {
@@ -56,6 +58,7 @@ function showPollution(pollution) {
         } else {
             alertColor = "$maroon";
         };
+       
                 
     console.log(airPollution);
 }
