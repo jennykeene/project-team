@@ -28,11 +28,11 @@
               <p class="menu-label">Search for a City</p>
               <ul class="menu-list">
                 <li class="is-active">
-                  <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="cityInput" type="text" autofocus="true"  />
+                  <input class="input is-primary is-normal" placeholder="Enter City" name="destination" id="cityInput"  value="" type="text" autofocus="true"  />
 
                 </li>
                 <li class="is-active">
-                  <button class="button is-info is-normal" type="submit" id="searchBtn">Search</button>
+                  <button class="button is-info is-normal" type="submit" id="searchBtn">Search</button> 
                 </li>
               </ul>
               
@@ -57,10 +57,23 @@
               </div>
   
               <div class="box">
-                <h3 class="title is-3">Air Quality</h3>
+                <h3 class="air-info">Air Quality</h3>
                 <article class="message is-primary">
                   <div class="message-body" id="airQuality">
+
                       <!-- insert air quality data here -->
+                      <span class="air-quality">...</span>
+                      <span class="air-quality-status"></span>
+
+                      <h3 class="component-names">carbon Monoxide:</h3>
+                      <span class="component-val" data-comp="co"></span>
+                      <h3 class="component-names">Nitrogen Monoxide:</h3>
+                      <span class="component-val" data-comp="no"></span>
+                      <h3 class="component-names">Nitrogen Dioxide</h3>
+                      <span class="component-val" data-comp="no2"></span>
+                      <h3 class="component-names">ozone</h3>
+                      <span class="component-val" data-comp="o3"></span>
+
                   </div>
                 </article>
               </div>
