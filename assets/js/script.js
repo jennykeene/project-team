@@ -5,6 +5,7 @@ const searchHistory = $("#searchHistory");
 const currentWeather = $("#currentWeather");
 const airQuaility = $("#air-quality");
 
+
 //============= Geocoding API ============= 
 function pullCoord(citySe) {
     let geoapiURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySe + "&limit=1&appid=" + key;
@@ -45,20 +46,20 @@ function fetchPollution(coordinates) {
 function showPollution(pollution) {
     let airPollution = pollution.data.current.pollution.aqius; 
         $(airQuaility).empty();
-        let alertColor;
-        $(airQuaility).append("<a>" + airPollution + "</a>")
-        if (airPollution <= 50) {
-            alertColor = "$tag is-success";
-        } else if (airPollution > 50 || airPollution < 101) {
-            alertColor = "$yellow";
-        } else if (airPollution > 150 || airPollution < 201) {
-            alertColor = "$orange";
-        } else if (airPollution > 200 || airPollution < 301 ) {
-            alertColor = "$purple";
-        } else {
-            alertColor = "$maroon";
+        console.log(airPollution);
+        let alertColor = $("#alert-color");
+        if (airPollution < 50) {
+            $(alertColor).attr("class","message is-success");
+        } else if (airPollution > 50 && airPollution < 101) {
+            $("#alert-color").attr("class", "message is-warning");
+        } else if (airPollution > 150 && airPollution < 201) {
+            $("#alert-color").attr("class", "message is-warning");
+        } else if (airPollution > 200 && airPollution < 301 ) {
+            $("#alert-color").attr("class", "message is-danger");
+        } else if (airPollution > 300) {
+            $("#alert-color").attr("class", "message is-dark");
         };
-       
+        $(airQuaility).append("<a>" + airPollution + "</a>");
                 
     console.log(airPollution);
 }
