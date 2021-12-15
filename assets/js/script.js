@@ -3,8 +3,9 @@ const key = "425535dc025827a7e77aa8a4d5289d87";
 const searchBtn = $("#searchBtn");
 const searchHistory = $("#searchHistory");
 const currentWeather = $("#currentWeather");
+const airQuaility = $("#air-quality");
 
-// fetch coordinates from city name input using Geocoding API 
+//============= Geocoding API ============= 
 function pullCoord(citySe) {
     let geoapiURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySe + "&limit=1&appid=" + key;
     fetch(geoapiURL)
@@ -24,10 +25,29 @@ function fetchWeather(coordinates) {
         .then (response => {
             response.json().then((weatherdata) => { 
                 showWeather(weatherdata);
+                fetchPollution(coordinates);
             });
         });
 };
 
+//============AIR Pollution API ===============
+function fetchPollution(coordinates) {
+    let pollURL = "http://api.airvisual.com/v2/nearest_city?lat=" + coordinates[0].lat + "&lon=" + coordinates[0].lon + "&key=53a550e6-2551-42f3-a95a-52e90dea9811";
+    console.log(pollURL);
+    fetch(pollURL) 
+        .then (response => { 
+            response.json().then((pollution) => {
+                showPollution(pollution);
+            });
+        });
+};
+
+function showPollution(pollution) {
+    let airPollution = pollution.data.current.pollution.aqius; 
+   
+                
+    console.log(airPollution);
+}
 //===========show weather =================
 function showWeather (weatherdata) {
     $(currentWeather).empty();
