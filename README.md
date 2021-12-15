@@ -1,7 +1,7 @@
 # Air Quality/Weather by City Application!
 
 ## User Story 
-- (DRAFT) As an avid hiker with allergies, 
+- As an avid hiker with allergies, 
 when looking up a city with beautiful hiking trails, I want to know the weather and air quality conditions so that I can hike without my allergies acting up.
 
 
@@ -19,7 +19,10 @@ when looking up a city with beautiful hiking trails, I want to know the weather 
 
 
 ### Deployed Application Link and Screenshot
-- WORK IN PROGRESS
+- https://jennyk1989.github.io/project-team/
+
+- <img width="1440" alt="Screen Shot 2021-12-15 at 1 59 46 PM" src="https://user-images.githubusercontent.com/92201576/146256581-8021b206-cf5f-4fdc-9ddf-6841cde1bbc8.png">
+
 
 
 
