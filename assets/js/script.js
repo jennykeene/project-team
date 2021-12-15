@@ -44,7 +44,7 @@ function showHistory (searchHistory) {
 
     for(let i=1; i < searchHistory.length; i++) {
         let historyButton = $("<a>" + JSON.stringify(searchHistory[i]) + "</a>")
-        $(historyButton).text(searchHistory[i]).addClass("button").attr("href");
+        $(historyButton).text(searchHistory[i]).addClass("button is-link is-light").attr("href");
         $(searchHistory).append(historyButton);
     }
 }
@@ -67,6 +67,13 @@ $(searchBtn).on("click", function(event) {
     showHistory(searchHistory);
 
     $("#cityInput").val("");
+});
+
+//==========history button click listener ===============
+$("#searchHistory").on("click", ".button", function() {
+    let historicalCity = $(this).text();
+    console.log(historicalCity);
+    pullCoord(historicalCity);
 })
 
 
