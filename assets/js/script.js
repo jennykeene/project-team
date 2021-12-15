@@ -20,7 +20,7 @@ function fetchWeather(coordinates) {
     let latitude = coordinates[0].lat;
     let longitude = coordinates[0].lon;
     const weatherURL ="http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=" + key;
-     
+    console.log(weatherURL);
     fetch(weatherURL)
         .then (response => {
             response.json().then((weatherdata) => { 
@@ -44,7 +44,19 @@ function fetchPollution(coordinates) {
 
 function showPollution(pollution) {
     let airPollution = pollution.data.current.pollution.aqius; 
-   
+        let alertColor;
+        if (airPollution <= 50) {
+            alertColor = "$green";
+        } else if (airPollution > 50 || airPollution < 101) {
+            alertColor = "$yellow";
+        } else if (airPollution > 150 || airPollution < 201) {
+            alertColor = "$orange";
+        } else if (airPollution > 200 || airPollution < 301 ) {
+            alertColor = "$purple";
+        } else {
+            alertColor = "$maroon";
+        };
+        $(airQuaility).append("<a>" + airPollution + "</a>").attr("class", "button").attr("class", alertColor);
                 
     console.log(airPollution);
 }
