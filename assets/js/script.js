@@ -56,7 +56,6 @@ function showPollution(pollution) {
         } else {
             alertColor = "$maroon";
         };
-        $(airQuaility).append("<a>" + airPollution + "</a>").attr("class", "button").attr("class", alertColor);
                 
     console.log(airPollution);
 }
