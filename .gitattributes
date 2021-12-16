@@ -1,4 +1,1 @@
-*.txt text
-*.html text
-*.css text
-*.js text
+* text=auto
