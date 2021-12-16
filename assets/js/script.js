@@ -9,7 +9,7 @@ const airQuaility = $("#air-quality");
 
 //============= Geocoding API ============= 
 function pullCoord(citySe) {
-    let geoapiURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + citySe + "&limit=1&appid=" + key;
+    let geoapiURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + citySe + "&limit=1&appid=" + key;
     fetch(geoapiURL)
         .then(response => {
             response.json().then((coordinates) => { 
