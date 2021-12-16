@@ -1,8 +1,7 @@
 # Air Quality/Weather by City Application!
 
 ## User Story 
-- As an avid hiker with allergies, 
-when looking up a city with beautiful hiking trails, I want to know the weather and air quality conditions so that I can hike without my allergies acting up.
+- As an avid traveler, when looking up a city that I wish to explore, I want to know the weather and air quality conditions so that I can explore without mother nature taking advantage of me.
 
 
 ## Technologies Used
