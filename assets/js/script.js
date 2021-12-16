@@ -21,7 +21,7 @@ function pullCoord(citySe) {
 function fetchWeather(coordinates) {
     let latitude = coordinates[0].lat;
     let longitude = coordinates[0].lon;
-    const weatherURL ="http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=" + key;
+    const weatherURL ="https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial&appid=" + key;
     console.log(weatherURL);
     fetch(weatherURL)
         .then (response => {
@@ -34,7 +34,7 @@ function fetchWeather(coordinates) {
 
 //============AIR Pollution API ===============
 function fetchPollution(coordinates) {
-    let pollURL = "http://api.airvisual.com/v2/nearest_city?lat=" + coordinates[0].lat + "&lon=" + coordinates[0].lon + "&key=" + keytwo;
+    let pollURL = "https://api.airvisual.com/v2/nearest_city?lat=" + coordinates[0].lat + "&lon=" + coordinates[0].lon + "&key=" + keytwo;
     console.log(pollURL);
     fetch(pollURL) 
         .then (response => { 
