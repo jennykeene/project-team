@@ -1,5 +1,6 @@
 //VARIABLES:
-const key = "425535dc025827a7e77aa8a4d5289d87";
+const key = config.SECRETKEY;
+const keytwo = config.SECRETKEY2;
 const searchBtn = $("#search-button");
 const searchHistory = $("#search-history");
 const currentWeather = $("#current-weather");
@@ -33,7 +34,7 @@ function fetchWeather(coordinates) {
 
 //============AIR Pollution API ===============
 function fetchPollution(coordinates) {
-    let pollURL = "http://api.airvisual.com/v2/nearest_city?lat=" + coordinates[0].lat + "&lon=" + coordinates[0].lon + "&key=53a550e6-2551-42f3-a95a-52e90dea9811";
+    let pollURL = "http://api.airvisual.com/v2/nearest_city?lat=" + coordinates[0].lat + "&lon=" + coordinates[0].lon + "&key=" + keytwo;
     console.log(pollURL);
     fetch(pollURL) 
         .then (response => { 
