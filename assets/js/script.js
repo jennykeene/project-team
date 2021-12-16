@@ -1,8 +1,8 @@
 //VARIABLES:
 const key = "425535dc025827a7e77aa8a4d5289d87";
-const searchBtn = $("#searchBtn");
-const searchHistory = $("#searchHistory");
-const currentWeather = $("#currentWeather");
+const searchBtn = $("#search-button");
+const searchHistory = $("#search-history");
+const currentWeather = $("#current-weather");
 const airQuaility = $("#air-quality");
 
 
@@ -89,7 +89,7 @@ function showHistory (searchHistory) {
 $(searchBtn).on("click", function(event) {
     event.preventDefault();
 
-    let citySe = $("#cityInput").val();
+    let citySe = $("#city-input").val();
     if (citySe === "") {
         return;
     }
@@ -101,11 +101,11 @@ $(searchBtn).on("click", function(event) {
     localStorage.setItem(searchHistory, JSON.stringify(searchHistory));
     showHistory(searchHistory);
 
-    $("#cityInput").val("");
+    $("#city-input").val("");
 });
 
 //==========history button click listener ===============
-$("#searchHistory").on("click", ".button", function() {
+$("#search-history").on("click", ".button", function() {
     let historicalCity = $(this).text();
     console.log(historicalCity);
     pullCoord(historicalCity);

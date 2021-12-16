@@ -25,7 +25,11 @@ when looking up a city with beautiful hiking trails, I want to know the weather 
 
 
 
-
-
 #### Draft- Wire Layout
 - ![Wire Layout](https://user-images.githubusercontent.com/92201576/145103687-c705e433-1fff-4ba9-ae0c-5eeadcf0756e.png)
+
+
+### Contributors 
+- Jennifer Keene: API Workflow/API Documentation Manager - https://github.com/jennyk1989
+- Arnold Bosch: API Workflow/Power-point - https://github.com/letscodebrow
+- Faissal Shabani: Frontend/README - https://github.com/Jiryeah
