@@ -81,8 +81,8 @@ function showHistory (searchHistory) {
         let historyButton = $("<a>" + JSON.stringify(searchHistory[i]) + "</a>")
         $(historyButton).text(searchHistory[i]).addClass("button is-link is-light block").attr("href");
         $(searchHistory).append(historyButton);
-    }
-}
+    };
+};
 
 
 //==================search button listener===================
