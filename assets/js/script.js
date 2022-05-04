@@ -4,7 +4,7 @@ const keytwo = config.SECRETKEY2;
 const searchBtn = $("#search-button");
 const searchHistory = $("#search-history");
 const currentWeather = $("#current-weather");
-const airQuaility = $("#air-quality");
+const airQuality = $("#air-quality");
 
 
 //============= Geocoding API ============= 
@@ -46,7 +46,7 @@ function fetchPollution(coordinates) {
 
 function showPollution(pollution) {
     let airPollution = pollution.data.current.pollution.aqius; 
-        $(airQuaility).empty();
+        $(airQuality).empty();
         console.log(airPollution);
         let alertColor = $("#alert-color");
         if (airPollution < 50) {
@@ -60,7 +60,7 @@ function showPollution(pollution) {
         } else if (airPollution > 300) {
             $("#alert-color").attr("class", "message is-dark");
         };
-        $(airQuaility).append("<a>" + airPollution + "</a>");
+        $(airQuality).append("<a>" + airPollution + "</a>");
                 
     console.log(airPollution);
 }
