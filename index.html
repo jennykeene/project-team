@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Wiz</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
@@ -22,7 +22,7 @@
     <!-- Main Container Start-->
     <main class="section is-medium">
       <!-- Centering Container Start -->
-      <section class="container"> 
+      <section class="container">
         <!-- City Search and Recent 'localstorage' History Start -->
         <div class="columns">
           <form class="column is-3 is-outlined">
@@ -30,10 +30,23 @@
               <label class="menu-label">Search for a City</label>
               <div class="control block">
                 <div class="block is-active">
-                  <input class="input is-link is-normal" placeholder="Enter City" name="destination" id="city-input" type="text" autofocus="true"/>
+                  <input
+                    class="input is-link is-normal"
+                    placeholder="Enter City"
+                    name="destination"
+                    id="city-input"
+                    type="text"
+                    autofocus="true"
+                  />
                   <!-- *querySelector needed* to track #city-input -->
                 </div>
-                <button class="button is-link is-outlined is-normal" type="submit" id="search-button">Search</button>
+                <button
+                  class="button is-link is-outlined is-normal"
+                  type="submit"
+                  id="search-button"
+                >
+                  Search
+                </button>
                 <!-- *eventListener needed* to track #search-button -->
               </div>
               <div class="is-active">
@@ -50,7 +63,7 @@
             <div class="content is-large">
               <div class="box">
                 <h3 class="title is-3">Current Weather</h3>
-                <article class="message is-link" >
+                <article class="message is-link">
                   <div class="message-body" id="current-weather">
                     <!-- Air Quality Dynamically Inserted  *querySelector nedded* to track #current-weather -->
                   </div>
@@ -74,10 +87,12 @@
       <!-- Centering Container End -->
     </main>
     <!-- Main Container End-->
-  <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type='text/javascript' src='./assets/js/config.js'></script>
-  <script src="./assets/js/script.js"></script>
-</body>
-
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/config.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
