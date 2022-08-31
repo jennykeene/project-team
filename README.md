@@ -15,7 +15,7 @@
 
 ### Deployed Application Link and Screenshot
 
-- https://jiryeah.github.io/team-project-one/
+- https://jennykeene.github.io/project-team/
 
 - <img width="1440" alt="Screen Shot 2021-12-15 at 1 59 46 PM" src="https://user-images.githubusercontent.com/92201576/146256581-8021b206-cf5f-4fdc-9ddf-6841cde1bbc8.png">
 
@@ -27,4 +27,4 @@
 
 - Jennifer Keene: API Workflow/API Documentation Manager - https://github.com/jennyk1989
 - Arnold Bosch: API Workflow/Power-point - https://github.com/letscodebrow
-- Faissal Shabani: Frontend/README - https://github.com/Jiryeah
+- Faissal Shabani: Frontend/README - https://github.com/ZairesDev
