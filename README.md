@@ -25,6 +25,6 @@
 
 ### Contributors
 
-- Jennifer Keene: API Workflow/API Documentation Manager - https://github.com/jennyk1989
+- Jennifer Keene: API Workflow/API Documentation Manager - https://github.com/jennykeene
 - Arnold Bosch: API Workflow/Power-point - https://github.com/letscodebrow
 - Faissal Shabani: Frontend/README - https://github.com/ZairesDev
